@@ -29,7 +29,7 @@ public class Lesson4 {
         for (int i = 0; i < values.length; i++) {
             if (values[i] == 0) {
                 values[i] = 1;
-            } else if (values[i] == 1) {
+            } else {
                 values[i] = 0;
             }
             System.out.print(values[i] + " ");
