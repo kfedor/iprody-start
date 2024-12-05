@@ -1,4 +1,4 @@
-package lesson7.same_name;
+package lesson7.same.name;
 
 public class Employee {
 
