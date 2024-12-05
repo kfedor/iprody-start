@@ -88,12 +88,10 @@ public class Lesson4 {
         for (int i = 0; i < twoDimensionalArrayExample.length; i++) {
             int[] value = twoDimensionalArrayExample[i];
             for (int j = 0; j < value.length; j++) {
-                if (i == j) {
+                if (i == j || i == value.length - 1 - j) {
                     value[j] = 1;
                 }
-                if (i == value.length - 1 - j) {
-                    value[j] = 1;
-                }
+
                 System.out.print(value[j] + " ");
             }
             System.out.println();
