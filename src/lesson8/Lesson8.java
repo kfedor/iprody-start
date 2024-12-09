@@ -52,7 +52,7 @@ public class Lesson8 {
         for (int i = source.length() - 1; i >= 0; i--) {
             stringBuilder.append(source.charAt(i));
         }
-        return String.valueOf(stringBuilder);
+        return stringBuilder.toString();
     }
 
     /**
