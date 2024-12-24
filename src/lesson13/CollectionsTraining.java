@@ -31,7 +31,7 @@ public class CollectionsTraining {
      * @return list of ints from array
      */
     public List<Integer> toList(int[] values) {
-        ArrayList<Integer> integers = new ArrayList<>();
+        List<Integer> integers = new ArrayList<>();
         for (int value : values) {
             integers.add(value);
         }
@@ -60,7 +60,7 @@ public class CollectionsTraining {
      * @param strings list with strings to count occurrences
      */
     public void calcOccurrence(List<String> strings) {
-        ArrayList<String> temp = new ArrayList<>();
+        List<String> temp = new ArrayList<>();
         for (int i = 0; i < strings.size(); i++) {
             if (!temp.contains(strings.get(i))) {
                 System.out.println(strings.get(i) + ":" + Collections.frequency(strings, strings.get(i)));
@@ -75,18 +75,33 @@ public class CollectionsTraining {
      * @param strings list with strings to count occurrences
      * @return list of collections which describes number of occurrences of each word.
      */
-    public List<Object> findOccurrence(List<String> strings) {
-        List<Object> lists = new ArrayList<>();
+    public List<CountStringOccurrence> findOccurrence(List<String> strings) {
+        List<CountStringOccurrence> lists = new ArrayList<>();
         List<String> check = new ArrayList<>();
         for (int i = 0; i < strings.size(); i++) {
             if (!check.contains(strings.get(i))) {
-                List<String> temp = new ArrayList<>();
-                temp.add((strings.get(i) + ":" + Collections.frequency(strings, strings.get(i))));
-                lists.add(temp);
+                lists.add(new CountStringOccurrence(strings.get(i), Collections.frequency(strings, strings.get(i))));
                 check.add(strings.get(i));
             }
         }
         return lists;
     }
 
+    public static class CountStringOccurrence {
+        private final String name;
+        private final int occurrence;
+
+        public CountStringOccurrence(String name, int occurrence) {
+            this.name = name;
+            this.occurrence = occurrence;
+        }
+
+        @Override
+        public String toString() {
+            return "name: "
+                    + name
+                    + ", occurrence: "
+                    + occurrence;
+        }
+    }
 }
