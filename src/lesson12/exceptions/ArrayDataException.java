@@ -1,12 +1,8 @@
 package lesson12.exceptions;
 
-public class ArrayDataException extends NumberFormatException {
+public class ArrayDataException extends RuntimeException {
 
-    public ArrayDataException() {
-        super();
-    }
-
-    public ArrayDataException(String s) {
-        super(s);
+    public ArrayDataException(String message, Throwable cause) {
+        super(message, cause);
     }
 }
