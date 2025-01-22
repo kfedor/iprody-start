@@ -37,6 +37,6 @@ public class Boyscout implements Comparable<Boyscout> {
 
     @Override
     public int compareTo(Boyscout o) {
-        return Integer.compare(this.age, o.age);
+        return Integer.compare(age, o.age);
     }
 }
