@@ -31,7 +31,7 @@ public class FileStorageReader implements ObjectStorageReader {
         try {
             return Files.readAllBytes(fileStorage.get(nameSpace, name));
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Failed to read the file.", e);
         }
     }
 
@@ -55,7 +55,7 @@ public class FileStorageReader implements ObjectStorageReader {
             }
 
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Failed to read the file.", e);
         }
         return chunks;
     }
