@@ -25,6 +25,16 @@ public class ValueCalculator {
             }
         });
 
+        thread1.start();
+        thread2.start();
+
+        try {
+            thread1.join();
+            thread2.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
         System.arraycopy(halfValues1, 0, values, 0, 500000);
         System.arraycopy(halfValues2, 0, values, 500000, 500000);
         long endTime = System.currentTimeMillis();
