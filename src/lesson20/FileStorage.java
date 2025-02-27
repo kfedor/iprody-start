@@ -16,7 +16,7 @@ public class FileStorage<Path> implements ObjectStorage<Path> {
     /**
      * Map that represents the storage of information.
      *
-     * key - costom key includes a pair of namespace and name.
+     * key - custom key includes a pair of namespace and name.
      * value - path to the file on local storage.
      */
     private final Map<PairKey, Path> fileMap = new HashMap<>();

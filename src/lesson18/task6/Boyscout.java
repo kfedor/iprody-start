@@ -8,7 +8,7 @@ public class Boyscout implements Comparable<Boyscout> {
 
     private Team team;
 
-    public Boyscout(String name, int age, Enum<Team> team) {
+    public Boyscout(String name, int age, Team team) {
         this.name = name;
         this.age = age;
         this.team = team;
