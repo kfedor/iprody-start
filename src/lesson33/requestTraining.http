@@ -1,0 +1,27 @@
+### Написать и выполнить HTTP-запрос с HTTP-методом GET при помощи cURL используя путь api/health/check,
+    для получения статус сервера.
+curl -X GET "https://timeapi.io/api/health/check"
+
+### Написать и выполнить HTTP-запрос с HTTP-методом GET и параметром запроса (Query Parameter) при помощи cURL
+    используя путь api/time/current/zone, для текущего времени согласно переданной временной зоны.
+curl -X GET “https://timeapi.io/api/time/current/zone?timezone=Europe/Moscow”
+
+### Написать и выполнить HTTP-запрос с HTTP-методом GET и параметром запроса (query-parameter)
+    при помощи cURL используя путь http://api/time/current/ip, для текущего времени согласно переданного IP-адреса.
+curl -X GET “https://timeapi.io/api/Time/current/ip?ipAddress=192.168.0.1"
+
+### Написать и выполнить HTTP-запрос с HTTP-методом GET и параметром пути (Path Variable, Path Parameter)
+    при помощи cURL используя путь api/conversion/dayoftheweek/{date},
+    для конвертации переданной даты в соответствующей ей день недели.
+curl -X GET "https://timeapi.io/api/conversion/dayoftheweek/2025-03-14”
+
+### Написать и выполнить HTTP-запрос с HTTP-методом POST и телом запроса (Request Body)
+    при помощи cURL используя путь api/conversion/translate, для перевода даты в времени
+    в человеко-понятно сообщение согласно переданному языку.
+curl -X POST "https://timeapi.io/api/Conversion/Translate" \
+-H "Content-Type: application/json" \
+-d '{"dateTime": "2025-03-14 14:30:00", "languageCode": "en"}'
+
+
+
+
